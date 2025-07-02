@@ -31,3 +31,16 @@ jobs:
 
       - name: Test import class
         run: uv run -- python -c "from timecopilot import TimeCopilot" 
+
+  build-docs:
+    name: Build Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Build docs
+        run: uv run --group docs mkdocs build
