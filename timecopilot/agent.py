@@ -499,7 +499,7 @@ class TimeCopilot:
                 `result.output.prettify()` to print a nicely formatted
                 report.
         """
-        query = f"User query: {query}" if query else "User did not provide a query"
+        query = f"User query: {query}" if query else None
         experiment_dataset_parser = ExperimentDatasetParser(
             model=self.forecasting_agent.model,
         )
