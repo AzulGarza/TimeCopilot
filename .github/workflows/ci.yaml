@@ -53,7 +53,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} 
 
   build-docs:
-    name: Build Docs
+    name: build docs
     runs-on: ubuntu-latest
     steps:
       - name: Clone repo
